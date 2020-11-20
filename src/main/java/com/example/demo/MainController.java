@@ -14,4 +14,16 @@ public class MainController {
         return "greeting";
     }
 
+    @GetMapping("/page1")
+    public String page1(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "page1";
+    }
+
+
+    @GetMapping("/design")
+    public String design(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "design";
+    }
 }
